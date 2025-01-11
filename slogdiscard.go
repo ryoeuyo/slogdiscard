@@ -17,18 +17,18 @@ func NewDiscardHandler() *DiscardHandler {
 	return &DiscardHandler{}
 }
 
-func (h *DiscardHandler) Handle(_ context.Context, _ slog.Record) error {
+func (h DiscardHandler) Handle(_ context.Context, _ slog.Record) error {
 	return nil
 }
 
-func (h *DiscardHandler) WithAttrs(_ []slog.Attr) slog.Handler {
+func (h DiscardHandler) WithAttrs(_ []slog.Attr) slog.Handler {
 	return h
 }
 
-func (h *DiscardHandler) WithGroup(_ string) slog.Handler {
+func (h DiscardHandler) WithGroup(_ string) slog.Handler {
 	return h
 }
 
-func (h *DiscardHandler) Enabled(_ context.Context, _ slog.Level) bool {
+func (h DiscardHandler) Enabled(_ context.Context, _ slog.Level) bool {
 	return false
 }
